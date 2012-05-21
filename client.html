@@ -7,11 +7,9 @@
   <body>
     <h1>gilgichat</h1>
 
-    <label for="msg-input">Broadcast message</label>
     <input id="msg-input" name="msg-input" type="text" size="30" />
-    <p>Press enter to submit your message.</p>
 
-    <ul id="broadcast-msg"></ul>
+    <div id="broadcast-msg"></div>
 
     <script>
       // Establish the connection with the server
@@ -20,7 +18,7 @@
       // on every message recived we print the new datas inside the #broadcast-msg div
       socket.on('broadcast_msg', function (data) {
         console.log('Get broadcasted msg:', data);
-        var msg = '<li>' + data + '</li>';
+        var msg = '<p>' + data + '</p>';
         $('#broadcast-msg').append(msg);
       });
  
