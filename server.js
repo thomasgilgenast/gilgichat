@@ -5,6 +5,12 @@ var io = require('socket.io').listen(app);
  
 // creating the server ( localhost:8000 )
 app.listen(process.env.PORT || 8000);
+
+// configure io to work with heroku
+io.configure(function () {
+  io.set('transports', ['xhr-polling']);
+    io.set('polling duration', 10);
+});
  
 // on server started we can load our client.html page
 function handler ( request, response ) {
