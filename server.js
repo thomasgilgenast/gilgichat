@@ -60,7 +60,7 @@ io.sockets.on( 'connection', function ( socket ) {
 	    // make a message to send to everyone
 	    var disconnected_msg = '<em>' + nickname + ' has disconnected</em>';
 	    // send to everyone
-	    io.socket.volatile.emit('broadcast_msg', disconnected_msg);
+	    io.sockets.volatile.emit('broadcast_msg', disconnected_msg);
 	});
     });
 });
