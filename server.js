@@ -33,7 +33,7 @@ io.sockets.on( 'connection', function ( socket ) {
         // Save a variable 'nickname' local to this socket
         socket.set('nickname', nickname, function () {
             // make a message
-            var connected_msg = '<em>' + nickname + ' has connected</em>';
+            var connected_msg = nickname + ' has connected';
             // tell the log
             console.log(connected_msg);
             // tell everyone else
@@ -58,7 +58,7 @@ io.sockets.on( 'connection', function ( socket ) {
 	    // log the disconnect
 	    console.log('Disconnect', nickname);
 	    // make a message to send to everyone
-	    var disconnected_msg = '<em>' + nickname + ' has disconnected</em>';
+	    var disconnected_msg = nickname + ' has disconnected';
 	    // send to everyone
 	    io.sockets.volatile.emit('broadcast_msg', disconnected_msg);
 	});
