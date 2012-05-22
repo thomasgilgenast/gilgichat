@@ -9,6 +9,8 @@
 
     <textarea rows="10" cols="30" id="broadcast-msg"></textarea>
 
+    <br/>
+
     <input id="msg-input" name="msg-input" type="text" size="30" />
 
     <script>
@@ -20,7 +22,7 @@
         console.log('Get broadcasted msg:', data);
         var msg = '\n' +  data;
         $('#broadcast-msg').append(msg);
-        $('#broadcast-msg').animate({scrollTop:$('#broadcast-msg')[0].scrollHeight - $('#broadcast-msg').height()},1000);
+        $('#broadcast-msg').animate({scrollTop:$('#broadcast-msg')[0].scrollHeight - $('#broadcast-msg').height()},500);
       });
  
       // Create a new socket connection
