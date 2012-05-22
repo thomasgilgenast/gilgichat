@@ -20,7 +20,7 @@
         console.log('Get broadcasted msg:', data);
         var msg = '\n' +  data;
         $('#broadcast-msg').append(msg);
-        $('#broadcast-msg').animate({scrollTop:$('broadcast-msg')[0].scrollHeight - $('broadcast-msg').height()},1000);
+        $('#broadcast-msg').animate({scrollTop:$('#broadcast-msg')[0].scrollHeight - $('#broadcast-msg').height()},1000);
       });
  
       // Create a new socket connection
